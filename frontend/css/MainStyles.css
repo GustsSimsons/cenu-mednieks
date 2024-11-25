@@ -21,6 +21,13 @@ body {
     font-size: 20px;
 }
 
+a{      /*ĒRIKS ŠO PIEVIENOJA, LAI PADARĪTU SUDZIBAS.LV PAR LINKU, KAS NEIZSKATĀS KĀ LINKS*/
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #CCCCCC;
+}
 /* ..........................MAIN LAYOUT.......................... */
 .upper-wrapper {
     background-color: #1E4A9F;

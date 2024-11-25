@@ -153,7 +153,10 @@ body {
     border: 2px solid white;
     border-radius: 5px;
 }
-#product-image {
+.product-image {
+    width: 80%;
+}
+#image-1 {
     width: 80%;
 }
 #review-image {
@@ -167,7 +170,7 @@ body {
     justify-content: space-between;
     font-size: 14px;
 }
-#store-name {
+.store-name {
     width: 90%;
     font-size: 14px;
 }

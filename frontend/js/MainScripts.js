@@ -1,3 +1,58 @@
+fetch('/get-items-main-window')
+            .then(response => response.json()) // Parse the JSON response
+            .then(data => {
+                if (data && data.length > 0) {      //ĻOTI LABI ĻOTI ILGTSPĒJĪGI
+                    data.forEach((item) => {        //BŪVĒ UN AIZPILDA KATRAI PRECEI NO DATU BĀZES SAVU KONTEINERI
+                        const item_cont = document.createElement('div');    //Container for the whole item
+                        item_cont.className = "sw_item";
+
+                        const star_cont = document.createElement('div');    //Container for the stars
+                        star_cont.className = "star-icon";
+
+                        const plus_cont = document.createElement('div');    //Container for the plus icon
+                        plus_cont.className = "plus-circle";
+                        plus_cont.innerHTML = "+";
+
+                        const star_img = document.createElement('img');     //The favorites star
+                        star_img.className = "toggle-star";
+                        star_img.alt = "Star";
+                        star_img.src = "/html/images/empthy-star.png";
+
+                        star_cont.append(star_img, plus_cont);              //Put the shit in the container
+
+                        const item_img = document.createElement('img');     //The item picture
+                        item_img.alt = "Item image";
+                        item_img.src = item.image;
+
+                        const np_cont = document.createElement('div');      //Container for the item name and price
+                        np_cont.className = "sw_name";
+                        const name = document.createElement('p');
+                        name.innerHTML = item.name;
+                        const price = document.createElement('p');
+                        price.innerHTML = item.price;
+                        np_cont.append(name, price);
+
+                        const store = document.createElement('a');          //Store name
+                        store.innerHTML = item.store_name;
+                        store.href = item.link;
+
+                        const rating = document.createElement('p');         //Pls rate this video 5 stars
+                        rating.id = "rating";
+                        rating.innerHTML = "5-stars";
+
+                        item_cont.append(star_cont, item_img, np_cont, store, rating);
+                        document.getElementById("bottom").appendChild(item_cont);
+                    
+                    });
+                    // Set the src attribute of the img tag with the id "image-1"
+                } else {
+                    console.error('No items found');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching items:', error);
+            });
+
 //-----------------PAGINATION-------------------//
 
 const items = document.querySelectorAll('.sw_item');
