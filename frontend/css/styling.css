@@ -174,3 +174,130 @@ body {
     width: 90%;
     font-size: 14px;
 }
+
+/* login daļas css */
+
+
+/* modal ir paredzēts tam, lai login screens būtu "pop-up" */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.blue-container {
+    background-color: #1E4A9F;
+    border-radius: 25px;
+}
+
+.blue-container img {
+    margin: 1.2em;
+    max-width: 4.5em;
+    height: 3.5em;
+}
+
+/* Login forma */
+.login-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding: 1em 1em 3em 1em;
+    margin: -6.2em 0em 0em 10em;
+    width: 35em;
+    height: 90%;
+    border-radius: 25px;
+}
+
+
+
+.login-header {
+    margin-top: 2.5em;
+    margin-bottom: 5em;
+    text-align: center;
+}
+
+.login-header h2{
+    color: black;
+}
+
+.login-input {
+    margin-bottom: 1em;
+}
+
+.login-input input {
+    border: #8E8E8E 2px solid;
+    border-radius: 5px;
+    padding: 1em 8em 1em 8em;
+    margin: 1em;
+    color: black;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper label {
+    position: absolute;
+    top: 0.2ex;
+    z-index: 1;
+    left: 2em;
+    background-color: white;
+    color: #8E8E8E;
+    padding: 0 0.5em;
+}
+
+.login-button {
+    margin-bottom: 0.2em;
+}
+
+.login-button button {
+   
+    background-color: #ff7f4f;
+    border: none;
+    border-radius: 5px;
+    padding: 1em 6em 1em 6em;
+    font-size: 18px;
+    margin-left: 2.3em;
+    color: white;
+    
+}
+
+button:hover {
+    background-color: #fd6b36;
+}
+
+.create-profile {
+    margin-left: 5em;
+}
+
+.create-profile p {
+    color: black;
+}
+
+.create-profile a {
+    color: #7C9BD8;
+}
+
+.create-button button{
+    background-color: #1E4A9F;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8em 6em 0.8em 6em;
+    font-size: 18px;
+    margin-left: 2.3em;
+    color: white;
+}
+
+.create-button button:hover {
+        background-color: #0e3d9c;
+}
