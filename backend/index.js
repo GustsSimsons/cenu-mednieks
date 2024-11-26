@@ -2,7 +2,10 @@ const express = require('express');
 const path = require('path');
 const pool = require('../database/db.js');
 
-
+const bcrypt = require('bcrypt');  // for hashing passwords
+const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
