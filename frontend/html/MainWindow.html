@@ -32,9 +32,11 @@
                 <div id="mid_text">
                     <p id="sw_p1">Trāpi mērķī</p>
                     <div class="bot">
-                        <form action="https://www.google.com/search" method="get" class="search_bar">
-                            <input type="text" placeholder="Meklēt.." name="search" autocomplete="off">
-                            <button type="submit"><img src="/html/images/magnifier-search.png" class="search_img"></button>
+                        <form class="search_bar">
+                            <input type="text" placeholder="Meklēt.." name="search" id="searchAgainBar" autocomplete="off">
+                            <div id="searchAgainButton"><!--ŠEIT NOTIKA BRĪVDOMĀŠANA, PLS NEMAINĪT VAI NOTIKS MĒSLI-->
+                                <img src="/html/images/magnifier-search.png" class="search_img">
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -42,22 +44,24 @@
             </div>
             <div class="dropdown-section">
                 <div class="dropdown">
-                    <button class="dropbtn">Kārtot pēc <img src="/html/images/arrow_white.png"></button>
-                    <div class="dropdown-content">
-                        <a href="#">Augstākā cena</a>
-                        <a href="#">Zemākā cena</a>
-                        <a href="#">Alfabēta secības A-Z</a>
-                        <a href="#">Pret alfabēta secības Z-A</a>
+                    <select class="dropbtn" id="kartot-pec">Kārtot pēc <img src="/html/images/arrow_white.png">
+                    <div class="dropdown-content"><!--ŠIS IR DOMĀTS KĀRTOŠANAI, NEZINU KĀ IZGŪT VĒRTĪBU NO OG VARIANTA-->
+                        <option value="i.price desc">Augstākā cena</a>
+                        <option value="i.price">Zemākā cena</a>
+                        <option value="i.name">Alfabēta secībā A-Z</a>
+                        <option value="i.name desc">Pret alfabēta secībā Z-A</a>
                     </div>
+                    </select>
                 </div>
 
                 <div class="dropdown">
-                    <button class="dropbtn">Cena <img src="/html/images/arrow_white.png"></button>
-                    <div class="dropdown-content">
-                        <a href="#">0€ - 4.99€</a>
-                        <a href="#">5€ - 9.99€</a>
-                        <a href="#">10€ +</a>
+                    <select class="dropbtn" id="cena">Cena <img src="/html/images/arrow_white.png">
+                    <div class="dropdown-content"><!--ŠIS IR DOMĀTS KĀRTOŠANAI, NEZINU KĀ IZGŪT VĒRTĪBU NO OG VARIANTA-->
+                        <option value="05">0€ - 4.99€</a>
+                        <option value="510">5€ - 9.99€</a>
+                        <option value="10">10€ +</a>
                     </div>
+                    </select>
                 </div>
             </div>
         </div>

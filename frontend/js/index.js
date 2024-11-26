@@ -1,4 +1,4 @@
-fetch('/get-items')
+fetch('/get-items') //GET THE ITEMS FOR THE START SCREEN
             .then(response => response.json()) // Parse the JSON response
             .then(data => {
                 if (data && data.length > 0) {
@@ -21,10 +21,6 @@ fetch('/get-items')
             .catch(error => {
                 console.error('Error fetching items:', error);
             });
-
-function srchBttn(){
-    window.open("http://localhost:3000/main-window");
-}
 
 
 const loginBtn = document.getElementById('login-btn');
@@ -53,4 +49,21 @@ window.addEventListener('click', (e) => {
     if (e.target === loginModal || e.target === registerModal) {
         closeModal();
     }
+});
+
+const searchBar = document.getElementById('searchbar');
+const searchButton = document.getElementById('searchbutton');
+
+searchButton.addEventListener('click', () => {
+    const inputValue = searchBar.value.trim();
+    if (inputValue) {
+        const url = `http://localhost:3000/main-window?query=${encodeURIComponent(inputValue)}`;
+        window.open(url, "_self"); // Open in the same tab *SOMETHING ABOUT THIS CAUSES FIREFOX TO OPEN 2 TABS. ?MITOSIS?
+    } else {
+        window.open("http://localhost:3000/main-window", "_self"); // No input, just go to main-window
+    }
+});
+
+searchButton.addEventListener('click', async () => {
+    window.open("http://localhost:3000/main-window");
 });

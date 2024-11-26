@@ -153,8 +153,14 @@ a:hover{
     user-select: none;
 }
 
+#searchAgainButton {    /* ŠIS IR PIEVIENOTS, JO SEARCH BTN PATAISĪJĀM PAR DIV */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .search_img {
-    max-width: 100%;
+    max-width: 100%;    
     height: auto;
 }
 
@@ -178,8 +184,8 @@ a:hover{
     padding: 20px 30px;
 
 }
-
-.search_bar button {
+/* Brīvdomāšana notika šeit */
+.search_bar div {
     margin-right: 20px;
     width: 40px;
     height: 40px;
