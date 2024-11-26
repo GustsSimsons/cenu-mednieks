@@ -1,8 +1,303 @@
-p {
-    color: rebeccapurple;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: white;
 }
 
-h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+    font-family: inter;
+
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1E4A9F;
+
+}
+
+#nav {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo img {
+    height: 100%;
+}
+#login-btn {
+    font-family: Inter;
+    font-size: 15px;
+
+    font-weight: 500;
+    color: #FF7F4F;
+    background-color: #1E4A9F;
+    border : 2px solid #FF7F4F;
+    border-radius: 20px;
+    padding: 4px 15px;
+}
+#register-btn {
+    margin-left: 15px;
+    font-size: 15px;
+
+    font-family: Inter;
+    font-weight: 500;
+    color: #1E4A9F;
+    background-color: #FF7F4F;
+    border : 2px solid #FF7F4F;
+    border-radius: 20px;
+    padding: 4px 6px;
+}
+#nav-btn {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 100px;
+
+}
+
+#middle {
+    display: flex;
+    width: 100%;
+    height: 45%;
+
+}
+#middle img {
+    margin-left: 200px;
+    height: 100%;
+    font-family: jose;
+}
+
+#slogan-div {
+    font-family: "Josefin Sans";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#slogan-div h1{
+    font-size: 40px;
+}
+#search {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+}
+#search img {
+    padding-left: 15px;
+    height: 85%;
+    border-radius: 0 20px 20px 0;
+}
+
+#searchbar_extension {
+    display: flex;
+    align-items: center;
+    border-radius: 0 30px 30px 0;
+    width: 80px;
+    background-color: white;
+}
+#search input {
+    padding-left: 20px;
+    font-size: 20px;
+    color: #8E8E8E;
+    width: 600px;
+    border-radius: 30px 0 0 30px;
+}
+#search input:focus {
+    outline: none;
+}
+
+#line-left, #line-right {
+    margin: 0 15px 0 15px;
+    width: 550px;
+    height: 3px;
+    background-color: white;
+    border-radius: 20px;
+}
+#popular-text {
+    margin-top: 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#products {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+
+#popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card {
+    margin-top: 15px;
+    margin-left: 18px;
+    margin-right: 18px;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.product-image {
+    width: 80%;
+}
+#image-1 {
+    width: 80%;
+}
+#review-image {
+    width: 55%;
+    align-self: self-start;
+    margin-left: 10px;
+}
+#name-price {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.store-name {
+    width: 90%;
+    font-size: 14px;
+}
+
+/* login daļas css */
+
+
+/* modal ir paredzēts tam, lai login screens būtu "pop-up" */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.blue-container {
+    background-color: #1E4A9F;
+    border-radius: 25px;
+}
+
+.blue-container img {
+    margin: 1.2em;
+    max-width: 4.5em;
+    height: 3.5em;
+}
+
+/* Login forma */
+.login-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding: 1em 1em 3em 1em;
+    margin: -6.2em 0em 0em 10em;
+    width: 35em;
+    height: 90%;
+    border-radius: 25px;
+}
+
+
+
+.login-header {
+    margin-top: 2.5em;
+    margin-bottom: 5em;
     text-align: center;
+}
+
+.login-header h2{
+    color: black;
+}
+
+.login-input {
+    margin-bottom: 1em;
+}
+
+.login-input input {
+    border: #8E8E8E 2px solid;
+    border-radius: 5px;
+    padding: 1em 8em 1em 8em;
+    margin: 1em;
+    color: black;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper label {
+    position: absolute;
+    top: 0.2ex;
+    z-index: 1;
+    left: 2em;
+    background-color: white;
+    color: #8E8E8E;
+    padding: 0 0.5em;
+}
+
+.login-button {
+    margin-bottom: 0.2em;
+}
+
+.login-button button {
+   
+    background-color: #ff7f4f;
+    border: none;
+    border-radius: 5px;
+    padding: 1em 6em 1em 6em;
+    font-size: 18px;
+    margin-left: 2.3em;
+    color: white;
+    
+}
+
+button:hover {
+    background-color: #fd6b36;
+}
+
+.create-profile {
+    margin-left: 5em;
+}
+
+.create-profile p {
+    color: black;
+}
+
+.create-profile a {
+    color: #7C9BD8;
+}
+
+.create-button button{
+    background-color: #1E4A9F;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8em 6em 0.8em 6em;
+    font-size: 18px;
+    margin-left: 2.3em;
+    color: white;
+}
+
+.create-button button:hover {
+        background-color: #0e3d9c;
 }
