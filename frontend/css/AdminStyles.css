@@ -1,0 +1,467 @@
+/* ..........................BASE.......................... */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    /* Ensure full height */
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: block;
+    background-color: #f1f1f1;
+    color: #FFFFFF;
+    font-family: 'Inter';
+    font-size: 20px;
+}
+
+/* ..........................MAIN LAYOUT.......................... */
+.upper-wrapper {
+    background-color: #1E4A9F;
+    width: 100vw;
+    height: 100%;
+    padding: 20px 0px 20px;
+    box-sizing: border-box;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    margin: 0px 30px 0px;
+}
+
+.mid {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    text-align: center;
+    width: 300px;
+    background-color: #1E4A9F;
+}
+
+.right {
+    width: 100%;
+    flex: 1;
+    color: #8E8E8E;
+}
+
+.bottom {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(5, 230px);
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.bot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ..........................LOGO.......................... */
+
+.logo {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    pointer-events: none;
+}
+
+.logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo p {
+    margin: 10px 0px;
+}
+
+#sw_sp1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ..........................ADMIN SIDEBAR.......................... */
+
+.Side_1:hover, .Side_2:hover {
+    background-color: #5574AF;
+}
+.Side_1, .Side_2 {
+    padding: 20px;
+    gap: 10px;
+    align-items: center;
+    display: flex;
+}
+.Side_2 {
+    padding-left: 15px;
+}
+.Side_1 img {
+    height: 45px;
+}
+.Side_2 img {
+    height: 50px;
+}
+
+.Side_1 a, .Side_2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ..........................ADMIN ITEM LIST.......................... */
+#sb_a_p1 {
+    text-shadow: 2px 2px 4px #8E8E8E;
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 40px;
+}
+.sb_a_preces {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.top_flex {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+#preces_sk {
+    padding-right: 15px;
+}
+.search_bar {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 40px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.search_bar input {
+    border: 0;
+    outline: none;
+    flex: 1;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 20px 30px;
+
+}
+.search_bar button {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #FF7F4F;
+    cursor: pointer;
+}
+
+.pievienot_p {
+    margin: 0 50px 0 15px;
+    text-align: center;
+    background-color: #FF7F4F;
+    color: white;
+    border-radius: 10px;
+    width: 215px;
+}
+
+.a_preces ul {
+    padding: 0 15% 0;
+    list-style-type: none;
+    text-align: center;
+}   
+.a_preces li {
+    justify-content: center;
+}
+.border_div {
+    border-top: 3px solid #8E8E8E;
+    border-bottom: 3px solid #8E8E8E;
+    margin-bottom: -3px;
+}
+.preces_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E4A9F;
+    height: 70px;
+}
+.preces_img img {
+    padding: 5px 2px;
+    margin: 3px;
+    background-color: white;
+    width: 65px;
+    border-radius: 5px;
+}
+.preces_item {
+    padding: 15px 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.preces_text {
+    font-size: 25px;
+    margin-left: 25px;
+}
+.preces_settings {
+    margin-left: auto;
+}
+.preces_settings img{
+    height: 70px;
+}
+
+/* ..........................PROFILE.......................... */
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#profile-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+.profile_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+#profile-btn:hover {
+    opacity: 0.7;
+}
+
+
+/* ..........................SEARCHBAR, HEADER AND IMAGES.......................... */
+
+
+
+#mid_text {
+    text-align: center;
+    margin: 0 20% 0 10px;
+}
+
+#sw_p1 {
+    font-family: 'Josefin Sans';
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    user-select: none;
+}
+
+/* ..........................PROFILE POPUP CONTAINER .......................... */
+.popup-container-prof {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* ..........................POPUP WRAPPER .......................... */
+.popup-wrapper-prof {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* ..........................BLUE RECTANGLE STYLE .......................... */
+.blue-rectangle-prof {
+    display: flex;
+    width: 100%;
+    background-color: #1E4A9F;
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+}
+
+/* ..........................PROFILE SIDEBAR STYLE .......................... */
+.sidebar-prof {
+    width: 30%;
+    background-color: #1E4A9F;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-prof ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-prof button {
+    display: flex;
+    align-items: center;
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sidebar-prof button.active {
+    background-color: #2D5CB6;
+    width: 100%;
+}
+
+.prof-icons {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo-popup-log img {
+    width: 50px;
+    height: auto;
+    padding: 20px;
+}
+
+/* ..........................PROFILE SECTION .......................... */
+.profile-section-prof {
+    width: 70%;
+    background-color: #ffffff;
+    color: black;
+    padding: 30px;
+    border-radius: 0 15px 15px 0;
+    text-align: left;
+    border-radius: 40px;
+}
+
+.profile-section-prof h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ..........................PROFILE PICTURE AND ACTIONS .......................... */
+.profile-picture-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.profile-picture-placeholder {
+    width: 60px;
+    height: 60px;
+    background-color: #FF7E4A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-picture-placeholder img {
+    width: 60%;
+    height: auto;
+}
+
+/* ..........................BUTTONS (ORANGE AND OUTLINED) .......................... */
+.orange-btn {
+    background-color: #FF7E4A;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #FF7E4A;
+}
+
+.orange-btn:hover {
+    background-color: #c5592e;
+    border-color: #c5592e;
+}
+
+.outlined-btn {
+    color: #FF7E4A;
+    padding: 8px 12px;
+    border: 2px solid #FF7E4A;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+}
+
+.outlined-btn:hover {
+    background-color: #e7e6e6;
+}
+
+/* ..........................USER NAME INPUT .......................... */
+.username-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.username-input input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* ..........................DELETE PROFILE BUTTON .......................... */
+.delete-profile-btn {
+    background-color: #FF4A4A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.delete-profile-btn:hover {
+    background-color: #E03A3A;
+}
+
+/* ..........................CHECK BUTTON .......................... */
+.check {
+    height: 100%;
+    width: auto;
+    background-color: #03AF1F;
+    border: none;
+    font-family: "Inter";
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.check:hover {
+    background-color: #07941f;
+}
+
